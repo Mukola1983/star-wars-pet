@@ -1,0 +1,58 @@
+{
+  "HEADER": {
+    "TITLE-APP": "Star Wars",
+    "CHANGE_LANGUAGE": "Change language",
+    "BUTTONS": {
+      "PEOPLE": "People",
+      "SHIPS": "Ships",
+      "PLANETS": "Planets"
+    }
+  },
+  "PEOPLE": {
+    "NAME": "Name",
+    "GENDER": "Gender",
+    "EYE_COLOR": "Eye color",
+    "SKIN_COLOR": "Skin Color",
+    "MASS": "Mass",
+    "HEIGHT": "Height",
+    "HOMEWORLD": "Homeworld",
+    "STARSHIPS": "Starships"
+  },
+  "PLANETS": {
+    "NAME": "Planet Name",
+    "CLIMATE": "Climate",
+    "TERRAIN": "Terrain",
+    "POPULATION": "Population",
+    "GRAVITY": "Gravity",
+    "ORBITAL_PERIOD": "Orbital Period"
+  },
+  "SHIPS": {
+    "NAME": "Ship Name",
+    "CREW": "Crew",
+    "STARSHIP_CLASS": "Starship Class",
+    "CREATED": "Created",
+    "MAX_SPEED": "Max Speed",
+    "CARGO_CAPACITY": "Cargo Capacity",
+    "HYPERDRIVE": "Hyperdrive Rating",
+    "MANUFACTURER": "Manufacturer",
+    "PASANGERS": "Pasengers",
+    "PILOTS": "Pilots"
+  },
+  "POSTS": {
+    "BODY": "Text",
+    "TITLE": "Title",
+    "ID": "ID",
+    "ENTER_TITLE": "Enter search title",
+    "SEARCH": "Search by Title",
+    "ENTER_TEXT": "Enter search text",
+    "SEARCH_TEXT": "Search by text",
+    "HOME": "Home",
+    "HEADER": "Posts List"
+  },
+  "FOOTER": "Thanks for Api",
+  "INPUT": "Enter Name",
+  "BACK": "Back",
+  "PEOPLE_LOAD": "All Persons are loaded",
+  "PLANETS_LOAD": "All Planets are loaded",
+  "SHIPS_LOAD": "All Starships are loaded"
+}

@@ -1,0 +1,39 @@
+<div>
+  <button [routerLink]="['/persons']" class="btn">
+    {{ "BACK" | translate }}
+  </button>
+  <div class="card">
+    <div>
+      <img
+        src="https://starwars-visualguide.com/assets/img/characters/{{
+          id
+        }}.jpg"
+        class="imgBig"
+        (error)="handleMissingImage($event)"
+      />
+    </div>
+    <div class="info">
+      <h3>{{ "PEOPLE.NAME" | translate }} : {{ person.name }}</h3>
+      <p>{{ "PEOPLE.EYE_COLOR" | translate }} : {{ person.eye_color }}</p>
+      <p>{{ "PEOPLE.GENDER" | translate }}: {{ person.gender }}</p>
+      <p>{{ "PEOPLE.SKIN_COLOR" | translate }} : {{ person.skin_color }}</p>
+      <p>{{ "PEOPLE.MASS" | translate }} : {{ person.mass }}</p>
+      <p [routerLink]="['/planet', homeWorldId]">
+        {{ "PEOPLE.HOMEWORLD" | translate }} :
+        <span class="link">{{ homeworld }}</span>
+      </p>
+      <div class="ships">
+        <p>{{ "PEOPLE.STARSHIPS" | translate }}:</p>
+        <ul>
+          <p
+            *ngFor="let ship of starships"
+            class="ship link"
+            [routerLink]="['/ship', ship.id]"
+          >
+            {{ ship.name }}
+          </p>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.ships {
+  display: flex;
+  align-items: center;
+}
+.ship {
+  font-size: 15px;
+}
+.link {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.link:hover {
+  text-decoration: underline;
+  color: rgb(146, 199, 219);
+  letter-spacing: 3px;
+}

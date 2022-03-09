@@ -1,0 +1,46 @@
+<input
+  type="text"
+  placeholder="{{ 'INPUT' | translate }}"
+  [(ngModel)]="searcByName"
+  class="input"
+/>
+
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="20"
+  (scrolled)="onScroll()"
+>
+  <div
+    *ngFor="let person of store.people | filter: searcByName"
+    class="box"
+    [routerLink]="['/person', getNum(person.url)]"
+  >
+    <div>
+      <img
+        src="https://starwars-visualguide.com/assets/img/characters/{{
+          getNum(person.url)
+        }}.jpg"
+        (error)="handleMissingImage($event)"
+        class="img"
+      />
+    </div>
+    <div class="textBlock">
+      <div>
+        <span>{{ "PEOPLE.NAME" | translate }}: </span>{{ person.name }}
+      </div>
+      <div>
+        <span>{{ "PEOPLE.GENDER" | translate }}: </span>{{ person.gender }}
+      </div>
+      <div>
+        <span>{{ "PEOPLE.MASS" | translate }}: </span>{{ person.mass }}
+      </div>
+      <div>
+        <span>{{ "PEOPLE.HEIGHT" | translate }}: </span>{{ person.height }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!store.peopleUrl" class="loaded">
+    <h2>{{ "PEOPLE_LOAD" | translate }}</h2>
+  </div>
+</div>

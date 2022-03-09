@@ -1,0 +1,41 @@
+<div>
+  <button [routerLink]="['/ships']" class="btn">
+    {{ "BACK" | translate }}
+  </button>
+  <div class="card">
+    <div>
+      <img
+        src="https://starwars-visualguide.com/assets/img/starships/{{ id }}.jpg"
+        class="imgBig"
+        (error)="handleMissingImage($event)"
+      />
+    </div>
+    <div class="info">
+      <h3>{{ "SHIPS.NAME" | translate }} : {{ ship.name }}</h3>
+      <p>
+        {{ "SHIPS.STARSHIP_CLASS" | translate }} : {{ ship.starship_class }}
+      </p>
+      <p>
+        {{ "SHIPS.MAX_SPEED" | translate }} : {{ ship.max_atmosphering_speed }}
+      </p>
+      <p>
+        {{ "SHIPS.CARGO_CAPACITY" | translate }} : {{ ship.cargo_capacity }}
+      </p>
+      <p>{{ "SHIPS.HYPERDRIVE" | translate }} : {{ ship.hyperdrive_rating }}</p>
+      <p>{{ "SHIPS.MANUFACTURER" | translate }} : {{ ship.manufacturer }}</p>
+      <p>{{ "SHIPS.PASANGERS" | translate }} : {{ ship.passengers }}</p>
+      <div class="ships">
+        <p>{{ "SHIPS.PILOTS" | translate }}:</p>
+        <ul>
+          <p
+            *ngFor="let pilot of pilots"
+            class="ship link"
+            [routerLink]="['/person', pilot.id]"
+          >
+            {{ pilot.name }}
+          </p>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

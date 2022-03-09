@@ -1,0 +1,49 @@
+.header {
+  text-align: center;
+  padding: 200px 100px 30px;
+  background-color: rgba(170, 100, 100, 0.473);
+  background: url(https://img4.goodfon.com/wallpaper/nbig/8/24/death-star-ii-boevaia-kosmicheskaia-stantsiia-zvezda-smerti.jpg)
+    center no-repeat;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+h1 {
+  font-size: 50px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: rgb(134, 117, 59);
+  text-shadow: 1px 1px 10px aquamarine;
+  cursor: pointer;
+  transition: 0.3s;
+}
+h1:hover {
+  color: rgb(153, 143, 110);
+  text-shadow: 1px 1px 20px aquamarine;
+}
+h4 {
+  font-size: 20px;
+  color: rgb(53, 50, 40);
+  text-shadow: 1px 1px 10px aquamarine;
+  cursor: pointer;
+  transition: 0.3s;
+}
+h4:hover {
+  color: rgb(153, 143, 110);
+  text-shadow: 1px 1px 20px aquamarine;
+}
+.popap {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 25px;
+  color: rgb(19, 25, 58);
+  font-weight: bold;
+  transition: 0.3s;
+}
+.popap:hover {
+  box-shadow: 1px 2px 10px rgb(87, 55, 55);
+}

@@ -1,0 +1,22 @@
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  background-color: rgba(87, 69, 69, 0.24);
+  color: rgb(134, 117, 59);
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+a {
+  color: rgb(134, 117, 59);
+  margin: 0 0 0 50px;
+}
+
+a:hover {
+  color: rgb(153, 143, 110);
+  text-shadow: 1px 1px 20px aquamarine;
+}

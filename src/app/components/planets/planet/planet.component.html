@@ -1,0 +1,37 @@
+<div>
+  <button [routerLink]="['/planets']" class="btn">
+    {{ "BACK" | translate }}
+  </button>
+  <div class="card">
+    <div>
+      <img
+        src="https://starwars-visualguide.com/assets/img/planets/{{ id }}.jpg"
+        class="imgBig"
+        (error)="handleMissingImage($event)"
+      />
+    </div>
+    <div class="info">
+      <h3>
+        <span>{{ "PLANETS.NAME" | translate }}: </span> {{ planet.name }}
+      </h3>
+      <p>
+        <span>{{ "PLANETS.CLIMATE" | translate }}: </span> :
+        {{ planet.climate }}
+      </p>
+      <p>
+        <span>{{ "PLANETS.TERRAIN" | translate }}: </span>{{ planet.terrain }}
+      </p>
+      <p>
+        <span>{{ "PLANETS.POPULATION" | translate }}: </span
+        >{{ planet.population }}
+      </p>
+      <p>
+        <span>{{ "PLANETS.GRAVITY" | translate }}: </span>{{ planet.gravity }}
+      </p>
+      <p>
+        <span>{{ "PLANETS.ORBITAL_PERIOD" | translate }}: </span
+        >{{ planet.orbital_period }}
+      </p>
+    </div>
+  </div>
+</div>

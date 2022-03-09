@@ -1,0 +1,45 @@
+<input
+  type="text"
+  placeholder="{{ 'INPUT' | translate }}"
+  [(ngModel)]="searcByName"
+  class="input"
+/>
+
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="20"
+  (scrolled)="onScroll()"
+>
+  <div
+    *ngFor="let ship of store.ships | filter: searcByName"
+    class="box"
+    [routerLink]="['/ship', getNum(ship.url)]"
+  >
+    <img
+      src="https://starwars-visualguide.com/assets/img/starships/{{
+        getNum(ship.url)
+      }}.jpg"
+      class="img"
+      (error)="handleMissingImage($event)"
+    />
+    <div>
+      <div>
+        <span>{{ "SHIPS.NAME" | translate }}: </span> {{ ship.name }}
+      </div>
+      <div>
+        <span>{{ "SHIPS.CREW" | translate }}: </span>{{ ship.crew }}
+      </div>
+      <div>
+        <span>{{ "SHIPS.STARSHIP_CLASS" | translate }}: </span
+        >{{ ship.starship_class }}
+      </div>
+      <div>
+        <span>{{ "SHIPS.CREATED" | translate }}: </span>{{ ship.created }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!store.shipsUrl" class="loaded">
+    <h2>{{ "SHIPS_LOAD" | translate }}</h2>
+  </div>
+</div>

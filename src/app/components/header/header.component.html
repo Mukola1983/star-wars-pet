@@ -1,0 +1,22 @@
+<div class="header">
+  <div class="row">
+    <h1>{{ "HEADER.TITLE-APP" | translate }}</h1>
+    <div class="lang">
+      <h4>{{ "HEADER.CHANGE_LANGUAGE" | translate }}</h4>
+      <select [(ngModel)]="curLang" (change)="changeLang()" class="popap">
+        <option *ngFor="let leng of languges">{{ leng }}</option>
+      </select>
+    </div>
+  </div>
+  <nav>
+    <button class="btn" [routerLink]="['persons']" routerLinkActive="active">
+      {{ "HEADER.BUTTONS.PEOPLE" | translate }}
+    </button>
+    <button class="btn" [routerLink]="['planets']" routerLinkActive="active">
+      {{ "HEADER.BUTTONS.PLANETS" | translate }}
+    </button>
+    <button class="btn" [routerLink]="['ships']" routerLinkActive="active">
+      {{ "HEADER.BUTTONS.SHIPS" | translate }}
+    </button>
+  </nav>
+</div>

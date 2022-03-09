@@ -1,0 +1,42 @@
+<input
+  type="text"
+  placeholder="{{ 'INPUT' | translate }}"
+  [(ngModel)]="searcByName"
+  class="input"
+/>
+
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="20"
+  (scrolled)="onScroll()"
+>
+  <div
+    *ngFor="let planet of store.planets | filter: searcByName"
+    class="box"
+    [routerLink]="['/planet', getNum(planet.url)]"
+  >
+    <img
+      src="https://starwars-visualguide.com/assets/img/planets/{{
+        getNum(planet.url)
+      }}.jpg"
+      (error)="handleMissingImage($event)"
+      class="img"
+      alt="Planet"
+    />
+    <div>
+      <div>
+        <span>{{ "PLANETS.NAME" | translate }}: </span> {{ planet.name }}
+      </div>
+      <div>
+        <span>{{ "PLANETS.CLIMATE" | translate }}: </span>{{ planet.climate }}
+      </div>
+      <div>
+        <span>{{ "PLANETS.TERRAIN" | translate }}: </span>{{ planet.terrain }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!store.planetsUrl" class="loaded">
+    <h2>{{ "PLANETS_LOAD" | translate }}</h2>
+  </div>
+</div>
