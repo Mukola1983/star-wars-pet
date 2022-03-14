@@ -30,7 +30,7 @@ export class PlanetsComponent {
     }
   }
   getNum(str: string) {
-    return str?.match(/[0-9]/g)?.join('');
+    return str.match(/[0-9]/g)?.join('');
   }
   handleMissingImage(event: any) {
     event.target.src = Photos.defaultFoto;

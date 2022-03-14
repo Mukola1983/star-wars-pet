@@ -18,9 +18,9 @@
       <p>{{ "PEOPLE.GENDER" | translate }}: {{ person.gender }}</p>
       <p>{{ "PEOPLE.SKIN_COLOR" | translate }} : {{ person.skin_color }}</p>
       <p>{{ "PEOPLE.MASS" | translate }} : {{ person.mass }}</p>
-      <p [routerLink]="['/planet', homeWorldId]">
+      <p [routerLink]="['/planets', homeWorldId]">
         {{ "PEOPLE.HOMEWORLD" | translate }} :
-        <span class="link">{{ homeworld }}</span>
+        <span class="link">{{ homeworldName }}</span>
       </p>
       <div class="ships">
         <p>{{ "PEOPLE.STARSHIPS" | translate }}:</p>
@@ -28,7 +28,7 @@
           <p
             *ngFor="let ship of starships"
             class="ship link"
-            [routerLink]="['/ship', ship.id]"
+            [routerLink]="['/ships', ship.id]"
           >
             {{ ship.name }}
           </p>

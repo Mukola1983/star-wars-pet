@@ -13,6 +13,10 @@ interface Ship {
   manufacturer?: string;
   passengers?: string[];
 }
+interface Pilot {
+  name: string;
+  id: number;
+}
 
 @Component({
   selector: 'app-ship',
@@ -22,11 +26,11 @@ interface Ship {
 export class ShipComponent implements OnInit {
   id = 0;
   ship: Ship = {};
-  pilots: any = [];
+  pilots: Pilot[] = [];
 
   constructor(public rs: GetDataServise, public route: ActivatedRoute) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.id = params['id'];
     });

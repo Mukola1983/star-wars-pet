@@ -14,7 +14,7 @@
   <div
     *ngFor="let planet of store.planets | filter: searcByName"
     class="box"
-    [routerLink]="['/planet', getNum(planet.url)]"
+    [routerLink]="['/planets', getNum(planet.url)]"
   >
     <img
       src="https://starwars-visualguide.com/assets/img/planets/{{

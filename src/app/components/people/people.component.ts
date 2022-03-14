@@ -36,7 +36,7 @@ export class GetPeopleComponent  {
     }
   }
   getNum(str: string) {
-    return str?.match(/[0-9]/g)?.join('');
+    return str.match(/[0-9]/g)?.join('');
   }
 
   handleMissingImage(event: any) {

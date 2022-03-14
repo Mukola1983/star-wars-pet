@@ -11,13 +11,13 @@ const routes: Routes = [
   { path: '', redirectTo: '/persons', pathMatch: 'full' },
 
   { path: 'persons', component: GetPeopleComponent },
-  { path: 'person/:id', component: PersonComponent },
+  { path: 'persons/:id', component: PersonComponent },
 
   { path: 'planets', component: PlanetsComponent },
-  { path: 'planet/:id', component: PlanetComponent },
+  { path: 'planets/:id', component: PlanetComponent },
 
   { path: 'ships', component: ShipsComponent },
-  { path: 'ship/:id', component: ShipComponent },
+  { path: 'ships/:id', component: ShipComponent },
 ];
 
 @NgModule({

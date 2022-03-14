@@ -14,7 +14,7 @@
   <div
     *ngFor="let ship of store.ships | filter: searcByName"
     class="box"
-    [routerLink]="['/ship', getNum(ship.url)]"
+    [routerLink]="['/ships', getNum(ship.url)]"
   >
     <img
       src="https://starwars-visualguide.com/assets/img/starships/{{

@@ -11,14 +11,14 @@ export class GetDataServise {
     return `https://swapi.dev/api/${kind}/${num}`;
   }
 
-  getData(kind: string, count: number) {
-    return this.http.get(this.url(kind, count));
+  getData(kind: string, id: number) {
+    return this.http.get(this.url(kind, id));
   }
 
   getItem(url: any) {
     return this.http.get(url);
   }
-  getPage(url:string) {
+  getPage(url: string) {
     return this.http.get(url);
   }
 }

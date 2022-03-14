@@ -14,7 +14,10 @@ interface Person {
   starships?: string[];
   url?: string;
 }
-
+interface Starship {
+  name: string;
+  id: number;
+}
 @Component({
   selector: 'app-person',
   templateUrl: './person.component.html',
@@ -22,10 +25,11 @@ interface Person {
 })
 export class PersonComponent implements OnInit {
   id = 0;
+  homeworldName = '';
+  homeWorldId = 0;
+
   person: Person = {};
-  homeworld = '';
-  homeWorldId: any = 0;
-  starships: any = [];
+  starships: Starship[] = [];
 
   constructor(public rs: GetDataServise, public route: ActivatedRoute) {}
 
@@ -49,8 +53,8 @@ export class PersonComponent implements OnInit {
 
   getHomeworld() {
     this.rs.getItem(this.person.homeworld).subscribe((res: any) => {
-      this.homeworld = res.name;
-      this.homeWorldId = this.person.homeworld?.match(/[0-9]/g)?.join('');
+      this.homeworldName = res.name;
+      this.homeWorldId = res.url.match(/[0-9]/g)?.join('');
     });
   }
   getStarships(arr: any) {
@@ -59,7 +63,7 @@ export class PersonComponent implements OnInit {
         next: (res: any) => {
           const ship: any = {};
           ship['name'] = res.name;
-          ship['id'] = res.url.match(/[0-9]/g).join('');
+          ship['id'] = res.url.match(/\d/g).join('');
           this.starships.push(ship);
         },
         error: (err: Error) => console.log(err),

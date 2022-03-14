@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  languges = ['en', 'ua'];
+  languages = ['en', 'ua'];
   curLang: string = 'en';
   constructor(public translate: TranslateService) {
     translate.setDefaultLang(this.curLang);

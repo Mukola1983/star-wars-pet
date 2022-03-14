@@ -14,7 +14,7 @@
   <div
     *ngFor="let person of store.people | filter: searcByName"
     class="box"
-    [routerLink]="['/person', getNum(person.url)]"
+    [routerLink]="['/persons', getNum(person.url)]"
   >
     <div>
       <img

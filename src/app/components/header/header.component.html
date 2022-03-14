@@ -4,7 +4,7 @@
     <div class="lang">
       <h4>{{ "HEADER.CHANGE_LANGUAGE" | translate }}</h4>
       <select [(ngModel)]="curLang" (change)="changeLang()" class="popap">
-        <option *ngFor="let leng of languges">{{ leng }}</option>
+        <option *ngFor="let leng of languages">{{ leng }}</option>
       </select>
     </div>
   </div>
