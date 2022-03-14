@@ -4,8 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class StoreServise {
-  constructor() {}
-
   people: any = [];
   peopleUrl = `https://swapi.dev/api/people/?page=1`;
 

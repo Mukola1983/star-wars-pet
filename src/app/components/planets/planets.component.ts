@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GetDataServise } from 'src/app/services/getData';
 import { StoreServise } from 'src/app/services/store';
 
@@ -9,12 +9,10 @@ import { Photos } from 'src/app/shared/photos';
   templateUrl: './planets.component.html',
   styleUrls: ['./planets.component.css'],
 })
-export class PlanetsComponent implements OnInit {
+export class PlanetsComponent {
   searcByName = '';
 
   constructor(public rs: GetDataServise, public store: StoreServise) {}
-
-  ngOnInit(): void {}
 
   onScroll() {
     this.addPlanets();

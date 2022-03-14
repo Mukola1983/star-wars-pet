@@ -12,6 +12,7 @@ interface Person {
   mass?: string;
   homeworld?: string;
   starships?: string[];
+  url?: string;
 }
 
 @Component({
@@ -56,10 +57,10 @@ export class PersonComponent implements OnInit {
     arr.forEach((element: any) => {
       this.rs.getItem(element).subscribe({
         next: (res: any) => {
-          const ob: any = {};
-          ob['name'] = res.name;
-          ob['id'] = res.url.match(/[0-9]/g).join('');
-          this.starships.push(ob);
+          const ship: any = {};
+          ship['name'] = res.name;
+          ship['id'] = res.url.match(/[0-9]/g).join('');
+          this.starships.push(ship);
         },
         error: (err: Error) => console.log(err),
       });

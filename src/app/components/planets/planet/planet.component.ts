@@ -21,8 +21,6 @@ interface Planet {
 export class PlanetComponent implements OnInit {
   id = 0;
   planet: Planet = {};
-  defaultFoto =
-    'https://c4.wallpaperflare.com/wallpaper/820/589/275/star-wars-sword-fantasy-art-lightsaber-hd-wallpaper-preview.jpg';
 
   constructor(public rs: GetDataServise, public route: ActivatedRoute) {}
 
@@ -31,7 +29,7 @@ export class PlanetComponent implements OnInit {
       this.id = param['id'];
     });
     this.rs.getData('planets', this.id).subscribe({
-      next: (res) => {
+      next: (res: any) => {
         this.planet = res;
       },
       error: (err: Error) => console.log(err),

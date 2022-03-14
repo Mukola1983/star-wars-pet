@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Photos } from 'src/app/shared/photos';
 import { ActivatedRoute } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { GetDataServise } from 'src/app/services/getData';
   templateUrl: './people.component.html',
   styleUrls: ['./people.component.css'],
 })
-export class GetPeopleComponent implements OnInit {
+export class GetPeopleComponent  {
   searcByName = '';
 
   constructor(
@@ -19,7 +19,6 @@ export class GetPeopleComponent implements OnInit {
     public store: StoreServise
   ) {}
 
-  ngOnInit(): void {}
 
   onScroll() {
     this.addPeople();

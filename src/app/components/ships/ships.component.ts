@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Photos } from 'src/app/shared/photos';
 
 import { GetDataServise } from 'src/app/services/getData';
@@ -9,12 +9,10 @@ import { StoreServise } from 'src/app/services/store';
   templateUrl: './ships.component.html',
   styleUrls: ['./ships.component.css'],
 })
-export class ShipsComponent implements OnInit {
+export class ShipsComponent {
   searcByName = '';
 
   constructor(public rs: GetDataServise, public store: StoreServise) {}
-
-  ngOnInit(): void {}
 
   onScroll() {
     this.addShips();

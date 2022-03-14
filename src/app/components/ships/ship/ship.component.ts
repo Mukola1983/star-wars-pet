@@ -46,10 +46,10 @@ export class ShipComponent implements OnInit {
     arr.forEach((element: any) => {
       this.rs.getItem(element).subscribe({
         next: (res: any) => {
-          const ob: any = {};
-          ob['name'] = res.name;
-          ob['id'] = res.url.match(/[0-9]/g).join('');
-          this.pilots.push(ob);
+          const pilot: any = {};
+          pilot['name'] = res.name;
+          pilot['id'] = res.url.match(/[0-9]/g).join('');
+          this.pilots.push(pilot);
         },
         error: (err: Error) => console.log(err),
       });
