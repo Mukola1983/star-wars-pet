@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PlanetComponent } from './components/planets/planet/planet.component';
 import { ShipsComponent } from './components/ships/ships.component';
 import { ShipComponent } from './components/ships/ship/ship.component';
+import { TestComponent } from './components/test/test.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -32,6 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PlanetComponent,
     ShipsComponent,
     ShipComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
